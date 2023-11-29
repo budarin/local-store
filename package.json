@@ -1,0 +1,29 @@
+{
+    "name": "@budarin/local-store",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "keywords": [
+        "local storage"
+    ],
+    "description": "Local storage wrapper",
+    "repository": {
+        "url": "https://github.com/budarin/local-store.git"
+    },
+    "author": "vadim_budarin <budarin-vv@yandex.ru>",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.3.2"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "scripts": {
+        "build": "sh ./tools/build.sh",
+        "prepublish": "npm run build",
+        "npm-publish": "npm run build && npm publish",
+        "upgrade deps": "yarn upgrade-interactive --latest;"
+    }
+}
