@@ -1,4 +1,4 @@
-export class CacheStore {
+class CacheStore {
     constructor() {}
 
     setItem(key: string, item: any): void {
@@ -17,3 +17,5 @@ export class CacheStore {
         localStorage.clear();
     }
 }
+
+export const localStore = new CacheStore();

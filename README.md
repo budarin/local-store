@@ -11,17 +11,15 @@ yarn add @budarin/local-store
 ## Usage
 
 ```ts
-import { LocalStore } from '@budarin/local-store';
+import { localStore } from '@budarin/local-store';
 
-const store = new LocalStore();
+localStore.set('key', 'value');
 
-store.set('key', 'value');
+localStore.get('key');
 
-store.get('key');
+localStore.remove('key');
 
-store.remove('key');
-
-store.clear();
+localStore.clear();
 ```
 
 ## License
