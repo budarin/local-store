@@ -13,7 +13,7 @@ yarn add @budarin/local-store
 ```ts
 import { LocalStore } from '@budarin/local-store';
 
-const store = new LocalStore(console);
+const store = new LocalStore(); //LocalStore(console)
 
 store.setItem('key', 'value');
 store.getItem('key');
