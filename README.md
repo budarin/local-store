@@ -15,9 +15,9 @@ import { LocalStore } from '@budarin/local-store';
 
 const store = new LocalStore(console);
 
-store.set('key', 'value');
-store.get('key');
-store.remove('key');
+store.setItem('key', 'value');
+store.getItem('key');
+store.removeItem('key');
 store.clear();
 ```
 
