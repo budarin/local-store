@@ -16,13 +16,13 @@ export class LocalStore {
     setItem(key: string, item: any): void {
         this.logger.debug('saveItem:', 'key:', key, 'item:', `"${item}"`);
 
-        localStorage.setItem(key, JSON.stringify(item));
+        localStorage.setItem(key, encodeURIComponent(JSON.stringify(item)));
     }
 
     getItem(key: string): any {
         this.logger.debug('getItem:', 'key:', key);
 
-        return JSON.parse(localStorage.getItem(key) as string);
+        return JSON.parse(decodeURIComponent(localStorage.getItem(key) as string));
     }
 
     removeItem(key: string): void {
