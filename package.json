@@ -13,9 +13,6 @@
     },
     "author": "vadim_budarin <budarin-vv@yandex.ru>",
     "license": "MIT",
-    "devDependencies": {
-        "typescript": "^5.4.3"
-    },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
@@ -26,5 +23,8 @@
         "prepublish": "npm run build",
         "npm-publish": "npm run build && npm publish",
         "upgrade deps": "yarn upgrade-interactive --latest;"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.3"
     }
 }
