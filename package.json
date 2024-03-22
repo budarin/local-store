@@ -14,7 +14,7 @@
     "author": "vadim_budarin <budarin-vv@yandex.ru>",
     "license": "MIT",
     "devDependencies": {
-        "typescript": "^5.4.2"
+        "typescript": "^5.4.3"
     },
     "publishConfig": {
         "access": "public",
