@@ -1,9 +1,11 @@
 export interface Logger {
     debug: (...data: unknown[]) => void;
+    error: (...data: unknown[]) => void;
 }
 
 const fakeLogger: Logger = {
     debug: () => {},
+    error: () => {},
 };
 
 export class LocalStore {
@@ -22,7 +24,12 @@ export class LocalStore {
     getItem(key: string): any {
         this.logger.debug('getItem:', 'key:', key);
 
-        return JSON.parse(decodeURIComponent(localStorage.getItem(key) as string));
+        try {
+            return JSON.parse(decodeURIComponent(localStorage.getItem(key) as string));
+        } catch (error) {
+            this.logger.error('getItem:', error);
+            return;
+        }
     }
 
     removeItem(key: string): void {
